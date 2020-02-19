@@ -1,0 +1,13 @@
+version: "3.1"
+
+services:
+  mongodb:
+    image: mongo:${MONGO_VERSION}
+    container_name: "${SERVICE_NAME}-mongodb"
+    volumes:
+      - ./.docker/mongo/data:/data/db
+    ports:
+      - ${MONGO_PORT_OUT}:${MONGO_PORT_IN}
+    command: mongod --logpath=/dev/null # --quiet --smallfiles --logpath=/var/log/mongodb/log.log
+    env_file:
+      - .env

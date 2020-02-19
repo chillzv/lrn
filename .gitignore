@@ -21,12 +21,12 @@ vendor/
 .LSOverride
 
 ### docker
-/.docker-compose.yaml
+.docker/.docker-compose.yaml
+docker-compose.yaml
 
 .env
-.dappfile.render.yaml
 
 # User-specific stuff
 .idea
 .idea_modules/
-
+!/.docker/mongo/data/
