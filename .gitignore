@@ -23,10 +23,12 @@ vendor/
 ### docker
 .docker/.docker-compose.yaml
 docker-compose.yaml
+/.docker/mongo/data/*
 
+# app
 .env
 
 # User-specific stuff
 .idea
 .idea_modules/
-!/.docker/mongo/data/
+
